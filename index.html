@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AbdulRahman Khawaga - Back-End Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Back-End developer specializes in building
+    efficient and scalable websites, focusing on creating robust,
+    high-performance back-end systems."
+    />
+    <meta
+      name="keywords"
+      content="full-stack developer, front-end,
+     back-end, web developer, bioinformatics, machine learning, AI, PHP, Laravel, 
+     JavaScript, HTML, CSS, portfolio"
+    />
+
+    <meta name="author" content="AbdulRahman Khawaga" />
+    
+    <!-- Resource hints for faster loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="styles/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="assets/icons/Logo_black.png" as="image">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Basic styles to prevent FOUC */
+      body, html { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
+      .hero, .personal-image, .info { opacity: 0; transition: opacity 0.5s ease; }
+      body.loaded .hero, body.loaded .personal-image, body.loaded .info { opacity: 1; }
+      header { width: 100%; height: 75px; background-color: white; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: fixed; top: 0; z-index: 100; }
+    </style>
+    
+    <!-- Main stylesheets -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/Logo_black.png" type="image/png">
+    <meta name="theme-color" content="#A53DFF">
+  </head>
+  <body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+      <div class="loader"></div>
+    </div>
+    
+    <!-- Add load class once page is ready -->
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.body.classList.add('loaded');
+        }, 500); // Short delay for better visual effect
+      });
+    </script>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href=""
+            ><img src="assets/icons/Logo_black.png" alt="" srcset=""
+          /></a>
+        </div>
+        <div class="side-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#blog">Blog</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="hero">
+        <div class="info">
+          <div class="personal-info">
+            <h1 id="typewriter"></h1>
+            <p>
+              I am a back-end developer based in Egypt. I specialize in building
+              efficient and scalable websites, focusing on creating robust,
+              high-performance back-end systems.
+            </p>
+            <button onclick="window.location.href='#contact';">
+              Say Hello!
+            </button>
+          </div>
+          <div class="no-projects">
+            <div class="box">
+              <h3>1+ Y.</h3>
+              <span>Experience</span>
+            </div>
+            <div class="box">
+              <h3>10+</h3>
+              <span>Project Completed</span>
+            </div>
+            <div class="box">
+              <h3>10</h3>
+              <span>Happy Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="personal-image">
+          <img
+            src="assets/images/pic_1_white-background.jpg"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <section class="description" id="about">
+        <div class="left-side">
+          <div class="left-pic">
+            <img src="assets/images/pic_1_gray-background.jpg" alt="" />
+          </div>
+          <div class="social-accounts">
+            <a href="https://github.com/AbdulRahmanKhawaga" class="social-icon"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="#" class="social-icon"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a
+              href="https://www.upwork.com/freelancers/~01ffba922f73720d0a"
+              class="social-icon"
+              ><i class="fa-brands fa-upwork"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/abdulrahman-khawaga-7bab09273/"
+              class="social-icon linkedin"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div class="right-side">
+          <h2 class="description-header">I am a Back-End <br />Developer</h2>
+          <p class="description-p">
+            I specialize in designing and developing stylish, modern websites,
+            web services, and online stores, ensuring that each project is
+            tailored to meet the specific needs of my clients. With a keen eye
+            for detail and a deep understanding of user experience design, I aim
+            to create immersive and intuitive digital experiences that drive
+            engagement and enhance usability. My expertise lies in both
+            front-end and back-end development, ensuring that each solution I
+            create is both visually appealing and functionally robust. My
+            background in computer science, bioinformatics, and AI allows me to
+            integrate advanced technologies into my work, providing cutting-edge
+            solutions for diverse industries.
+          </p>
+          <div class="buttons">
+            <button
+              onclick="window.location.href='#portfolio';"
+            >
+              My Projects
+            </button>
+            <a
+              id="download-btn"
+              href="assets/docs/AbdulRahman-Khawaga-CV.pdf"
+              download
+              class="download-btn"
+            >
+              <button><i class="fa-solid fa-download"></i> Download CV</button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="work-process" id="process">
+      <div class="left">
+        <h2>Work Process</h2>
+        <p>
+          At the heart of every successful project lies a structured workflow
+          that ensures quality and consistency. My work process is designed to
+          transform ideas into impactful solutions through four carefully
+          crafted stages. This methodical approach has helped me deliver
+          exceptional results across diverse projects while maintaining clear
+          communication with clients throughout the journey.
+        </p>
+      </div>
+      <div class="right">
+        <div id="box1">
+          <img src="assets/icons/Frame_44.png" alt="" />
+          <h3>1.Research</h3>
+          <p>
+            Thoroughly investigating client needs and market landscape.
+            Gathering insights to build strong project foundations
+          </p>
+        </div>
+        <div id="box2">
+          <img src="assets/icons/Frame_44_(2).png" alt="" />
+          <h3>2.Analyze</h3>
+          <p>
+            Converting research into actionable strategies. Identifying key
+            opportunities and optimal solutions.
+          </p>
+        </div>
+        <div id="box3">
+          <img src="assets/icons/Frame_44_(3).png" alt="" />
+          <h3>3.Design</h3>
+          <p>
+            Transforming concepts into compelling visuals. Creating thoughtful,
+            purpose-driven solutions.
+          </p>
+        </div>
+        <div id="box4">
+          <img src="assets/icons/Frame_44_(4).png" alt="" />
+          <h3>4.Launch</h3>
+          <p>
+            Delivering polished final products with precision. Ensuring
+            successful implementation and continued support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2>Portfolio</h2>
+          <p>Below are summary of my projects:</p>
+        </div>
+
+        <div class="portfolio-cards">
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="assets/images/invoices.PNG"
+                alt="Invoices Project Screenshot"
+              />
+            </div>
+            <div class="card-description">
+              <div class="card-tag">Back-End/Laravel</div>
+              <h3>Invoices Project</h3>
+              <p>
+                Project for a company that specializes in bill collection. It
+                focuses on managing and processing invoices for various clients.
+              </p>
+              <button class="case-study-btn">
+                Case Study <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="assets/images/Lotel.PNG"
+                alt="Lotel Project Screenshot"
+              />
+            </div>
+            <div class="card-description">
+              <div class="card-tag">Full-Stack</div>
+              <h3>Lotel Project</h3>
+              <p>
+                Lotel" is a website designed for booking hotels and tourist
+                attractions, offering a platform for users to find and reserve
+                the best options for their travel needs.
+              </p>
+              <button class="case-study-btn">
+                Case Study <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="assets/images/worldOfWatches.PNG"
+                alt="World Of Watches Screenshot"
+              />
+            </div>
+            <div class="card-description">
+              <div class="card-tag">Front-End</div>
+              <h3>World Of Watches</h3>
+              <p>
+                World Of Watches is an online shopping website for watches'
+                brands.
+              </p>
+              <button class="case-study-btn">
+                Case Study <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/electra.PNG" alt="Electra Screenshot" />
+            </div>
+            <div class="card-description">
+              <div class="card-tag">Front-End</div>
+              <h3>Electra</h3>
+              <p>
+                Electra is an online shopping website for electrical equipments.
+              </p>
+              <button class="case-study-btn">
+                Case Study <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="assets/images/youtube_cloning.PNG"
+                alt="Youtube Cloning Screenshot"
+              />
+            </div>
+            <div class="card-description">
+              <div class="card-tag">Front-End</div>
+              <h3>Youtube Cloning</h3>
+              <p>Website that clones youtube.</p>
+              <button class="case-study-btn">
+                Case Study <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="assets/images/twitter_cloning.PNG"
+                alt="Twitter Cloning Screenshot"
+              />
+            </div>
+            <div class="card-description">
+              <div class="card-tag">Front-End</div>
+              <h3>Twitter Cloning</h3>
+              <p>Website that clones Twitter</p>
+              <button class="case-study-btn">
+                Case Study <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="assets/images/path.PNG"
+                alt="Stenosis Path Detection Screenshot"
+              />
+            </div>
+            <div class="card-description">
+              <div class="card-tag">AI/Machine Learning/Image Processing</div>
+              <h3>Stenosis Path Detection</h3>
+              <p>
+                Models for finding best route for coronary artery stenosis
+                detection after segmentation and object detection.
+              </p>
+              <button class="case-study-btn">
+                Case Study <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="assets/images/anemia.PNG"
+                alt="Anemia Classification Research Screenshot"
+              />
+            </div>
+            <div class="card-description">
+              <div class="card-tag">AI/Machine Learning</div>
+              <h3>Anemia Classification Research</h3>
+              <p>
+                Anemia classification with ML models published in Kafrelshiekh
+                Journal of Information Sciences.
+              </p>
+              <a
+                href="https://kjis.journals.ekb.eg/article_327328.html"
+                class="download-btn"
+              >
+                <button>
+                  Read Paper <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-footer">
+          <button class="more-btn">More Projects</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideas">
+      <h1>Do you have Project Idea?</h1>
+      <h1>Let's discuss your project!</h1>
+      <button onclick="window.location.href='#contact';">
+        Let's work Together<i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </section>
+    <section class="blog" id="blog">
+      <div class="section-header">
+        <h2>Blog</h2>
+        <p>Latest articles and updates</p>
+      </div>
+
+      <div class="blog-container">
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="assets/images/worldOfWatches.PNG" alt="World of Watches Project" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-date">January 15, 2023</span>
+                <span class="blog-category">Web Development</span>
+              </div>
+              <h3 class="blog-title">Building an E-Commerce Platform for Watch Enthusiasts</h3>
+              <p class="blog-excerpt">Learn about the technologies and challenges behind creating a modern shopping experience.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="assets/images/invoices.PNG" alt="Invoices Project" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-date">March 22, 2023</span>
+                <span class="blog-category">Laravel</span>
+              </div>
+              <h3 class="blog-title">Creating a Robust Invoice Management System with Laravel</h3>
+              <p class="blog-excerpt">Exploring the architecture and features of a modern invoice tracking application.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="assets/images/Lotel.PNG" alt="Lotel Project" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-date">May 10, 2023</span>
+                <span class="blog-category">Full-Stack</span>
+              </div>
+              <h3 class="blog-title">Hotel Booking System: From Concept to Deployment</h3>
+              <p class="blog-excerpt">A deep dive into building a comprehensive hotel reservation platform.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-navigation">
+          <button class="blog-nav-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="blog-dots">
+            <span class="blog-dot active"></span>
+            <span class="blog-dot"></span>
+            <span class="blog-dot"></span>
+          </div>
+          <button class="blog-nav-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="services-l">
+        <h1>What I do?</h1>
+        <p>What is my Experience?</p>
+        <button onclick="window.location.href='#contact';">
+          Say Hello!
+        </button>
+      </div>
+      <div class="services-r">
+        <div class="service-item">
+          <div class="service-name">
+            <h2>Full-Stack Development</h2>
+            <p>Trainee at ITI</p>
+          </div>
+          <img src="assets/images/iti.png" alt="" />
+        </div>
+        <div class="service-item">
+          <div class="service-name">
+            <h2>Back-End Development</h2>
+            <p>Trainee at Top Business</p>
+          </div>
+          <img src="assets/images/top-business.png" alt="" />
+        </div>
+        <div class="service-item">
+          <div class="service-name">
+            <h2>Front-End Development</h2>
+            <p>Instructor at Discovery Academy for science and Technolgy</p>
+          </div>
+          <img src="assets/images/discovery.png" alt="" />
+        </div>
+        <div class="service-item">
+          <div class="service-name">
+            <h2>AI and Machine Learning</h2>
+            <p>Researcher</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">
+            <h2>Bioinformatics</h2>
+            <p>Researcher</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <h1>Skills</h1>
+      
+      <div class="skills-category">
+        <h2>Programming Languages</h2>
+        <div class="skills-img">
+          <div class="skill">
+            <img src="assets/icons/javascript.png" alt="JavaScript" />
+            <h2>JavaScript</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/php.gif" alt="PHP" />
+            <h2>PHP</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/cpp.png" alt="C++" />
+            <h2>C++</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/java.png" alt="Java" />
+            <h2>Java</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/python.png" alt="Python" />
+            <h2>Python</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/R.png" alt="R" />
+            <h2>R</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skills-category">
+        <h2>Web Technologies</h2>
+        <div class="skills-img">
+          <div class="skill">
+            <img src="assets/icons/HTML5.png" alt="HTML5" />
+            <h2>HTML5</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/CSS3.png" alt="CSS3" />
+            <h2>CSS3</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skills-category">
+        <h2>Frameworks & Tools</h2>
+        <div class="skills-img">
+          <div class="skill">
+            <img src="assets/icons/bootstrap.png" alt="Bootstrap" />
+            <h2>Bootstrap</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/laravel.png" alt="Laravel" />
+            <h2>Laravel</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/git.png" alt="Git" />
+            <h2>Git</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skills-category">
+        <h2>Databases</h2>
+        <div class="skills-img">
+          <div class="skill">
+            <img src="assets/icons/mysql.png" alt="MySQL" />
+            <h2>MySQL</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discuss" id="contact">
+        <div class="contact">
+          <div class="contact-info">
+            <h1>Let's contact and discuss your Project</h1>
+            <div class="address">
+              <i class="fa-solid fa-location-dot"></i>
+              <div class="add">
+                <h3>Address:</h3>
+                <p>Shebin-ELKom/Menoufia/Egypt</p>
+              </div>
+            </div>
+            <div class="email">
+              <i class="fa-solid fa-envelope"></i>
+              <div class="add">
+                <h3>My Email:</h3>
+                <p>AbdulRahmanKh1010@gmail.com</p>
+              </div>
+            </div>
+            <div class="phone">
+              <i class="fa-solid fa-phone"></i>
+              <div class="add">
+                <h3>Phone:</h3>
+                <p>+201018996721</p>
+                <p>+966552865022</p>
+              </div>
+            </div>
+            <div class="social-accounts">
+              <a
+                href="https://github.com/AbdulRahmanKhawaga"
+                class="social-icon"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.upwork.com/freelancers/~01ffba922f73720d0a"
+                class="social-icon"
+                ><i class="fa-brands fa-upwork"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/abdulrahman-khawaga-7bab09273/"
+                class="social-icon linkedin"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <p>Send Me a message</p>
+            <form action="">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name*"
+                required
+              /><br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email*"
+                required
+              /><br />
+              <input
+                type="text"
+                name="loc"
+                id="loc"
+                placeholder="Location"
+              /><br />
+              <div class="bud-sub">
+                <input
+                  type="text"
+                  name="budget"
+                  id="budget"
+                  placeholder="Budget*"
+                  required
+                />
+                <input
+                  type="text"
+                  name="sub"
+                  id="sub"
+                  placeholder="Subject*"
+                  required
+                /><br />
+              </div>
+              <input
+                type="text"
+                name="message"
+                id="message"
+                placeholder="Message*"
+                required
+              /><br />
+              <button>Submit <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+    </section>
+
+    <footer>
+      <div class="logo">
+        <a href=""
+          ><img src="assets/icons/Logo_white.png" alt="" srcset=""
+        /></a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <span id="copyrights">Copyright &copy; 2025 AbdulRahman Khawaga</span>
+    </footer>
+    <button id="scrollBtn"><i class="fa-solid fa-angles-up"></i></button>
+    <script src="js/main.js"></script>
+  </body>
+</html>
