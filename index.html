@@ -18,48 +18,76 @@
     />
 
     <meta name="author" content="AbdulRahman Khawaga" />
-    
+
     <!-- Resource hints for faster loading -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
     <!-- Preload critical assets -->
-    <link rel="preload" href="styles/style.css" as="style">
-    <link rel="preload" href="js/main.js" as="script">
-    <link rel="preload" href="assets/icons/Logo_black.png" as="image">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
-    
+    <link rel="preload" href="styles/style.css" as="style" />
+    <link rel="preload" href="js/main.js" as="script" />
+    <link rel="preload" href="assets/icons/logo.png" as="image" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      as="style"
+    />
+
     <!-- Critical CSS for above-the-fold content -->
     <style>
       /* Basic styles to prevent FOUC */
-      body, html { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
-      .hero, .personal-image, .info { opacity: 0; transition: opacity 0.5s ease; }
-      body.loaded .hero, body.loaded .personal-image, body.loaded .info { opacity: 1; }
-      header { width: 100%; height: 75px; background-color: white; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: fixed; top: 0; z-index: 100; }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+      }
+      .hero,
+      .personal-image,
+      .info {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      body.loaded .hero,
+      body.loaded .personal-image,
+      body.loaded .info {
+        opacity: 1;
+      }
+      header {
+        width: 100%;
+        height: 75px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        z-index: 100;
+      }
     </style>
-    
+
     <!-- Main stylesheets -->
     <link rel="stylesheet" href="styles/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    
+
     <!-- Favicon -->
-    <link rel="icon" href="assets/icons/Logo_black.png" type="image/png">
-    <meta name="theme-color" content="#A53DFF">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" sizes="96x96" />
+    <meta name="theme-color" content="#A53DFF" />
   </head>
   <body>
     <!-- Loading Overlay -->
     <div class="loading-overlay">
       <div class="loader"></div>
     </div>
-    
+
     <!-- Add load class once page is ready -->
     <script>
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          document.body.classList.add('loaded');
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.body.classList.add("loaded");
         }, 500); // Short delay for better visual effect
       });
     </script>
@@ -67,7 +95,7 @@
       <nav>
         <div class="logo">
           <a href=""
-            ><img src="assets/icons/Logo_black.png" alt="" srcset=""
+            ><img src="assets/icons/logo.png" alt="" srcset=""
           /></a>
         </div>
         <div class="side-menu">
@@ -163,9 +191,7 @@
             solutions for diverse industries.
           </p>
           <div class="buttons">
-            <button
-              onclick="window.location.href='#portfolio';"
-            >
+            <button onclick="window.location.href='#portfolio';">
               My Projects
             </button>
             <a
@@ -417,16 +443,26 @@
         <div class="blog-grid">
           <div class="blog-card">
             <div class="blog-image">
-              <img src="assets/images/worldOfWatches.PNG" alt="World of Watches Project" />
+              <img
+                src="assets/images/worldOfWatches.PNG"
+                alt="World of Watches Project"
+              />
             </div>
             <div class="blog-content">
               <div class="blog-meta">
                 <span class="blog-date">January 15, 2023</span>
                 <span class="blog-category">Web Development</span>
               </div>
-              <h3 class="blog-title">Building an E-Commerce Platform for Watch Enthusiasts</h3>
-              <p class="blog-excerpt">Learn about the technologies and challenges behind creating a modern shopping experience.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 class="blog-title">
+                Building an E-Commerce Platform for Watch Enthusiasts
+              </h3>
+              <p class="blog-excerpt">
+                Learn about the technologies and challenges behind creating a
+                modern shopping experience.
+              </p>
+              <a href="#" class="blog-read-more"
+                >Read More <i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
 
@@ -439,9 +475,16 @@
                 <span class="blog-date">March 22, 2023</span>
                 <span class="blog-category">Laravel</span>
               </div>
-              <h3 class="blog-title">Creating a Robust Invoice Management System with Laravel</h3>
-              <p class="blog-excerpt">Exploring the architecture and features of a modern invoice tracking application.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 class="blog-title">
+                Creating a Robust Invoice Management System with Laravel
+              </h3>
+              <p class="blog-excerpt">
+                Exploring the architecture and features of a modern invoice
+                tracking application.
+              </p>
+              <a href="#" class="blog-read-more"
+                >Read More <i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
 
@@ -454,21 +497,32 @@
                 <span class="blog-date">May 10, 2023</span>
                 <span class="blog-category">Full-Stack</span>
               </div>
-              <h3 class="blog-title">Hotel Booking System: From Concept to Deployment</h3>
-              <p class="blog-excerpt">A deep dive into building a comprehensive hotel reservation platform.</p>
-              <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 class="blog-title">
+                Hotel Booking System: From Concept to Deployment
+              </h3>
+              <p class="blog-excerpt">
+                A deep dive into building a comprehensive hotel reservation
+                platform.
+              </p>
+              <a href="#" class="blog-read-more"
+                >Read More <i class="fa-solid fa-arrow-right"></i
+              ></a>
             </div>
           </div>
         </div>
 
         <div class="blog-navigation">
-          <button class="blog-nav-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="blog-nav-btn prev-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
           <div class="blog-dots">
             <span class="blog-dot active"></span>
             <span class="blog-dot"></span>
             <span class="blog-dot"></span>
           </div>
-          <button class="blog-nav-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="blog-nav-btn next-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -477,9 +531,7 @@
       <div class="services-l">
         <h1>What I do?</h1>
         <p>What is my Experience?</p>
-        <button onclick="window.location.href='#contact';">
-          Say Hello!
-        </button>
+        <button onclick="window.location.href='#contact';">Say Hello!</button>
       </div>
       <div class="services-r">
         <div class="service-item">
@@ -519,13 +571,17 @@
     </section>
     <section class="skills">
       <h1>Skills</h1>
-      
+
       <div class="skills-category">
         <h2>Programming Languages</h2>
         <div class="skills-img">
           <div class="skill">
             <img src="assets/icons/javascript.png" alt="JavaScript" />
             <h2>JavaScript</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/typescript.png" alt="TypeScript" />
+            <h2>TypeScript</h2>
           </div>
           <div class="skill">
             <img src="assets/icons/php.gif" alt="PHP" />
@@ -549,7 +605,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="skills-category">
         <h2>Web Technologies</h2>
         <div class="skills-img">
@@ -561,9 +617,13 @@
             <img src="assets/icons/CSS3.png" alt="CSS3" />
             <h2>CSS3</h2>
           </div>
+          <div class="skill">
+            <img src="assets/icons/apache.jpg" alt="Apache" />
+            <h2>Apache</h2>
+          </div>
         </div>
       </div>
-      
+
       <div class="skills-category">
         <h2>Frameworks & Tools</h2>
         <div class="skills-img">
@@ -576,12 +636,16 @@
             <h2>Laravel</h2>
           </div>
           <div class="skill">
+            <img src="assets/icons/django.png" alt="Laravel" />
+            <h2>Django</h2>
+          </div>
+          <div class="skill">
             <img src="assets/icons/git.png" alt="Git" />
             <h2>Git</h2>
           </div>
         </div>
       </div>
-      
+
       <div class="skills-category">
         <h2>Databases</h2>
         <div class="skills-img">
@@ -591,106 +655,118 @@
           </div>
         </div>
       </div>
+
+      <div class="skills-category">
+        <h2>Operating Systems</h2>
+        <div class="skills-img">
+          <div class="skill">
+            <img src="assets/icons/linux.jpeg" alt="Linux" />
+            <h2>Linux</h2>
+          </div>
+          <div class="skill">
+            <img src="assets/icons/windows.jpg" alt="Windows" />
+            <h2>Windows</h2>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="discuss" id="contact">
-        <div class="contact">
-          <div class="contact-info">
-            <h1>Let's contact and discuss your Project</h1>
-            <div class="address">
-              <i class="fa-solid fa-location-dot"></i>
-              <div class="add">
-                <h3>Address:</h3>
-                <p>Shebin-ELKom/Menoufia/Egypt</p>
-              </div>
-            </div>
-            <div class="email">
-              <i class="fa-solid fa-envelope"></i>
-              <div class="add">
-                <h3>My Email:</h3>
-                <p>AbdulRahmanKh1010@gmail.com</p>
-              </div>
-            </div>
-            <div class="phone">
-              <i class="fa-solid fa-phone"></i>
-              <div class="add">
-                <h3>Phone:</h3>
-                <p>+201018996721</p>
-                <p>+966552865022</p>
-              </div>
-            </div>
-            <div class="social-accounts">
-              <a
-                href="https://github.com/AbdulRahmanKhawaga"
-                class="social-icon"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a href="#" class="social-icon"
-                ><i class="fa-brands fa-whatsapp"></i
-              ></a>
-              <a
-                href="https://www.upwork.com/freelancers/~01ffba922f73720d0a"
-                class="social-icon"
-                ><i class="fa-brands fa-upwork"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/abdulrahman-khawaga-7bab09273/"
-                class="social-icon linkedin"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
+      <div class="contact">
+        <div class="contact-info">
+          <h1>Let's contact and discuss your Project</h1>
+          <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="add">
+              <h3>Address:</h3>
+              <p>Shebin-ELKom/Menoufia/Egypt</p>
             </div>
           </div>
-
-          <div class="contact-form">
-            <p>Send Me a message</p>
-            <form action="">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Name*"
-                required
-              /><br />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email*"
-                required
-              /><br />
-              <input
-                type="text"
-                name="loc"
-                id="loc"
-                placeholder="Location"
-              /><br />
-              <div class="bud-sub">
-                <input
-                  type="text"
-                  name="budget"
-                  id="budget"
-                  placeholder="Budget*"
-                  required
-                />
-                <input
-                  type="text"
-                  name="sub"
-                  id="sub"
-                  placeholder="Subject*"
-                  required
-                /><br />
-              </div>
-              <input
-                type="text"
-                name="message"
-                id="message"
-                placeholder="Message*"
-                required
-              /><br />
-              <button>Submit <i class="fa-solid fa-arrow-right"></i></button>
-            </form>
+          <div class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="add">
+              <h3>My Email:</h3>
+              <p>AbdulRahmanKh1010@gmail.com</p>
+            </div>
+          </div>
+          <div class="phone">
+            <i class="fa-solid fa-phone"></i>
+            <div class="add">
+              <h3>Phone:</h3>
+              <p>+201018996721</p>
+              <p>+966552865022</p>
+            </div>
+          </div>
+          <div class="social-accounts">
+            <a href="https://github.com/AbdulRahmanKhawaga" class="social-icon"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="#" class="social-icon"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a
+              href="https://www.upwork.com/freelancers/~01ffba922f73720d0a"
+              class="social-icon"
+              ><i class="fa-brands fa-upwork"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/abdulrahman-khawaga-7bab09273/"
+              class="social-icon linkedin"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
           </div>
         </div>
+
+        <div class="contact-form">
+          <p>Send Me a message</p>
+          <form action="">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name*"
+              required
+            /><br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email*"
+              required
+            /><br />
+            <input
+              type="text"
+              name="loc"
+              id="loc"
+              placeholder="Location"
+            /><br />
+            <div class="bud-sub">
+              <input
+                type="text"
+                name="budget"
+                id="budget"
+                placeholder="Budget*"
+                required
+              />
+              <input
+                type="text"
+                name="sub"
+                id="sub"
+                placeholder="Subject*"
+                required
+              /><br />
+            </div>
+            <input
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Message*"
+              required
+            /><br />
+            <button>Submit <i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
     </section>
 
     <footer>
