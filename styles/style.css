@@ -712,7 +712,12 @@ nav{
         font-size: 0.95rem;
         margin-bottom: 20px;
     }
-    
+    .right-side .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding-left: 0;
+    }
     .right-side .buttons button {
         padding: 10px 15px;
         font-size: 0.9rem;
@@ -864,7 +869,7 @@ nav{
     
     .right div {
         max-width: 300px;
-        width: calc(50% - 25px);
+        /* width: calc(50% - 25px); */
     }
     
     #box3 {
@@ -888,7 +893,7 @@ nav{
 
 @media (max-width: 575.98px) {
     .work-process {
-        padding: 60px 15px 40px;
+        padding: 160px 15px 40px;
     }
     
     .left h2 {
@@ -914,6 +919,12 @@ nav{
     
     .right div p {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .right div {
+        max-width: 300px;
     }
 }
 
@@ -2490,7 +2501,9 @@ footer {
 }
 
 footer .logo img {
-    height: 35px;
+    height: 45px;
+    width: auto;
+    transition: all 0.3s ease;
 }
 
 footer .nav-links {
@@ -2834,18 +2847,23 @@ body.loaded .discuss {
         border-left: none;
         position: relative;
     }
-    
+    .skills-category .skills-title{
+        margin-bottom: 25px;
+    }
+
     .skills-category h2::before {
-        content: '';
+        /* content: '';
         position: absolute;
         bottom: -5px;
-        left: 50%;
+        left: 50%; */
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
         background-color: #A53DFF;
     }
-    
+    .skills-title{
+        margin-bottom: 20px;
+    }
     .skill {
         width: calc(50% - 10px);
         min-width: 70px;
@@ -2863,7 +2881,7 @@ body.loaded .discuss {
     }
     
     .skills-img {
-        gap: 10px;
+        gap: 20px;
     }
 }
 
@@ -2919,6 +2937,39 @@ body.loaded .discuss {
     
     nav {
         padding: 20px 4%;
+    }
+}
+
+/* Responsive adjustments for footer logo */
+@media (max-width: 992px) {
+    footer .logo img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    footer .logo img {
+        height: 100px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    footer .logo img {
+        height: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    footer .logo img {
+        width: 120px;
+        height: auto;
+    }
+}
+@media (min-width: 993px) and (max-width: 1199px) {
+    footer .logo img {
+        width: 100px;
+        height: auto;
     }
 }
 
