@@ -1,20 +1,4 @@
-/**
- * Main JavaScript file for AbdulRahman Khawaga Portfolio
- * Contains functionality for: 
- * - Mobile navigation menu
- * - Active link highlighting
- * - Typewriter effect
- * - Scroll to top button
- * - Blog navigation with pagination
- */
-
-// ========================================
-// HEADER FUNCTIONALITY
-// ========================================
-
-// ------------------------------------
-// Mobile Navigation Menu Functionality
-// ------------------------------------
+//toggle menu
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.side-menu');
     const navLinks = document.querySelector('.nav-links');
@@ -85,9 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// ========================================
-// OTHER WEBSITE FUNCTIONALITY
-// ========================================
 
 // ------------------------------------
 // Typewriter Effect for Name
@@ -434,40 +415,4 @@ document.addEventListener('DOMContentLoaded', function() {
       prevBtn.click();
     }
   }
-});
-
-// ------------------------------------
-// Adjust Scroll Position for Anchor Links
-// ------------------------------------
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the process link
-    const processLink = document.querySelector('a[href="#process"]');
-    
-    // Add click event listener
-    processLink.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default anchor behavior
-        
-        // Get the target element
-        const targetElement = document.getElementById('process');
-        
-        // Calculate position (element position minus header height minus additional offset)
-        const headerHeight = document.querySelector('header').offsetHeight;
-        const additionalOffset = 180; // Adjust this value as needed (pixels below the element)
-        
-        // Get the element's position relative to the viewport
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        
-        // Calculate the scroll position (current scroll position + element position - header - offset)
-        const offsetPosition = window.pageYOffset + elementPosition - headerHeight - additionalOffset;
-        
-        // Scroll to the calculated position with smooth behavior
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    });
-});
-
-window.addEventListener('resize', () => {
-  console.log(`Viewport size: ${window.innerWidth} x ${window.innerHeight}`);
 });

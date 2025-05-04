@@ -297,7 +297,7 @@ nav{
 
 @media (max-width: 992px) {
     .hero {
-        margin-top: 90px;
+        margin-top: 150px;
         gap: 40px;
         justify-content: space-between;
     }
@@ -2905,7 +2905,7 @@ body.loaded .discuss {
     }
     
     .hero {
-        margin-top: 90px;
+        margin-top: 190px;
     }
 }
 
