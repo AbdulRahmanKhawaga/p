@@ -436,3 +436,38 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// ------------------------------------
+// Adjust Scroll Position for Anchor Links
+// ------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the process link
+    const processLink = document.querySelector('a[href="#process"]');
+    
+    // Add click event listener
+    processLink.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        
+        // Get the target element
+        const targetElement = document.getElementById('process');
+        
+        // Calculate position (element position minus header height minus additional offset)
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const additionalOffset = 180; // Adjust this value as needed (pixels below the element)
+        
+        // Get the element's position relative to the viewport
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        
+        // Calculate the scroll position (current scroll position + element position - header - offset)
+        const offsetPosition = window.pageYOffset + elementPosition - headerHeight - additionalOffset;
+        
+        // Scroll to the calculated position with smooth behavior
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
+window.addEventListener('resize', () => {
+  console.log(`Viewport size: ${window.innerWidth} x ${window.innerHeight}`);
+});

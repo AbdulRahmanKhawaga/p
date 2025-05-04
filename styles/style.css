@@ -122,7 +122,7 @@ nav{
     
     .nav-links a {
         margin: 15px 0;
-        width: 80%;
+        width: 50%;
         text-align: center;
     }
 }
@@ -263,7 +263,7 @@ nav{
     background-color: white;
     border-radius: 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-    transition: box-shadow 1s ease-out;
+    transition: box-shadow 0.5s ease-in-out;
     overflow: hidden;
 }
 
@@ -497,9 +497,9 @@ nav{
     transform: translateY(-5px);
 }
 
+/* General social accounts styling */
 .social-accounts {
-    width: 100%;
-    max-width: 280px;
+    width: 90%;
     background-color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -508,13 +508,28 @@ nav{
     padding: 15px;
     border-radius: 10px;
     position: relative;
-    margin-top: -30px;
+    bottom: 40px;
+    margin: 0 auto;
+}
+
+/* Override width specifically for description section */
+.description .left-side .social-accounts {
+    width: 75%;
+    max-width: 250px;
+}
+
+@media (max-width: 575.98px) {
+    .description .left-side .social-accounts {
+        width: 90%;
+        padding: 12px;
+        bottom: 30px;
+    }
 }
 
 .social-icon i {
-    font-size: clamp(16px, 1.2vw, 22px);
+    font-size: 24px;
     text-decoration: none;
-    padding: 10px;
+    padding: 12px;
     border-radius: 50%;
     transition: all 0.3s ease;
     color: #A53DFF;
@@ -531,7 +546,10 @@ nav{
     flex-direction: column;
     justify-content: center;
 }
-
+.description{
+    position: relative;
+    top: 100px;
+}
 .description-header {
     line-height: 1.4;
     font-size: clamp(1.8rem, 2.5vw, 2.5rem);
@@ -550,26 +568,44 @@ nav{
 
 .right-side .buttons {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    gap: 25px;
     flex-wrap: wrap;
+    margin-top: 15px;
+    padding-left: 40px;
 }
 
 .right-side .buttons button {
     background-color: #A53DFF;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 15px 25px;
     font-size: 1rem;
     font-weight: 550;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    min-width: 160px;
 }
 
 .right-side .buttons button:hover {
     background-color: #8a33d6;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(165, 61, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(165, 61, 255, 0.3);
+}
+
+@media (max-width: 575.98px) {
+    .right-side .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .right-side .buttons button, 
+    .right-side .buttons #download-btn {
+        width: 80%;
+        max-width: 220px;
+    }
 }
 
 #download-btn {
@@ -609,7 +645,6 @@ nav{
 @media (min-width: 992px) and (max-width: 1199px) {
     .left-side .social-accounts {
         position: relative;
-        margin-top: -50px; /* Overlap the photo by 20px more than the default -30px */
         z-index: 2;
     }
 }
@@ -632,10 +667,6 @@ nav{
         max-width: 280px;
     }
     
-    .social-accounts {
-        margin-top: 20px;
-        position: static;
-    }
     
     .description-header {
         text-align: center;
@@ -697,6 +728,8 @@ nav{
     justify-content: center;
     align-items: center;
     gap: clamp(40px, 8vw, 100px);
+    padding-top: 300px;
+    padding-bottom: 200px;
 }
 
 .left {
@@ -731,12 +764,13 @@ nav{
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: clamp(20px, 3vw, 30px);
+    padding: clamp(15px, 2.5vw, 25px);
     border-left: 3px solid #A53DFF;
     transition: all 0.3s ease-in-out;
     height: 100%;
     display: flex;
     flex-direction: column;
+    max-width: 280px;
 }
 
 .right div:hover {
@@ -747,21 +781,21 @@ nav{
 }
 
 .right div img {
-    width: clamp(40px, 5vw, 60px);
-    height: clamp(40px, 5vw, 60px);
-    margin-bottom: 20px;
+    width: clamp(35px, 4vw, 50px);
+    height: clamp(35px, 4vw, 50px);
+    margin-bottom: 15px;
 }
 
 .right div h3 {
     color: #132238;
-    font-size: clamp(1.1rem, 1.3vw, 1.3rem);
-    margin-bottom: 10px;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
 .right div p {
     color: #697484;
-    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-size: clamp(0.85rem, 0.95vw, 0.95rem);
     line-height: 1.5;
 }
 
@@ -776,19 +810,38 @@ nav{
 /* Work Process Media Queries */
 @media (max-width: 1200px) {
     .work-process {
-        padding: 150px 30px 80px;
+        padding: 400px 30px 80px;
+        height: 1200px;
     }
     
     .right div {
-        padding: 25px;
+        padding: 20px;
+        max-width: 260px;
+    }
+    
+    .right div img {
+        width: 35px;
+        height: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .right div h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .right div p {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 992px) {
     .work-process {
         flex-direction: column;
-        padding: 100px 30px 60px;
+        padding: 200px 30px 60px;
         gap: 40px;
+        height: auto;
+        min-height: 800px;
     }
     
     .left, .right {
@@ -802,6 +855,16 @@ nav{
     
     .right {
         grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .right div {
+        max-width: 300px;
+        width: calc(50% - 25px);
     }
     
     #box3 {
@@ -2119,11 +2182,34 @@ nav{
     margin-top: 30px;
     width: auto;
     display: flex;
-    gap: 15px;
+    gap: 25px;
     background: none;
     box-shadow: none;
     padding: 0;
     position: static;
+}
+
+.contact-info .social-icon i {
+    font-size: 28px;
+    padding: 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-info .social-icon i:hover {
+    transform: translateY(-5px);
+    color: #8a33d6;
+}
+
+@media (max-width: 575.98px) {
+    .contact-info .social-accounts {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .contact-info .social-icon i {
+        font-size: 28px;
+        padding: 10px;
+    }
 }
 
 .contact-form {
@@ -2734,4 +2820,107 @@ body.loaded .discuss {
         font-size: 1.3rem;
     }
 }
+
+/* Small Screen Improvements for Skills Section */
+@media (max-width: 480px) {
+    .skills-category {
+        width: 100%;
+    }
+    
+    .skills-category h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+        text-align: center;
+        border-left: none;
+        position: relative;
+    }
+    
+    .skills-category h2::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #A53DFF;
+    }
+    
+    .skill {
+        width: calc(50% - 10px);
+        min-width: 70px;
+        height: 100px;
+        padding: 10px;
+    }
+    
+    .skill img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .skill h2 {
+        font-size: 0.75rem;
+    }
+    
+    .skills-img {
+        gap: 10px;
+    }
+}
+
+/* Performance Optimization for Images */
+.skill img {
+    width: clamp(40px, 6vw, 70px);
+    height: clamp(40px, 6vw, 70px);
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+    will-change: transform;
+}
+
+/* Enhanced Loading and Animation Styles */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    will-change: opacity;
+}
+
+/* Device-specific orientation fixes */
+@media (max-width: 992px) and (orientation: landscape) {
+    .services {
+        min-height: auto;
+        padding: 30px;
+    }
+    
+    .skills-category {
+        margin-bottom: 20px;
+    }
+    
+    .hero {
+        margin-top: 90px;
+    }
+}
+
+/* Media query for screens around 560px */
+@media (max-width: 576px) {
+    .logo img {
+        height: 120px;
+        width: auto;
+        transition: all 0.3s ease;
+    }
+    
+    nav {
+        padding: 20px 4%;
+    }
+}
+
+
   
